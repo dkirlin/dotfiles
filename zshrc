@@ -14,7 +14,7 @@ ZSH_THEME="robbyrussell"
 
 GPG_TTY=`tty`
 export GPG_TTY
-PATH=$PATH:~/bin:/usr/local/bin:/usr/local/sbin/:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:~/bin:/usr/bin/:/usr/local/bin:/usr/local/sbin/:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 alias ls="ls -G"
 #Git Aliases
@@ -101,3 +101,6 @@ export PATH="/Users/dkkirlin/.rvm/gems/ruby-2.0.0-p353/bin:/Users/dkkirlin/.rvm/
 # ssh
  export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
