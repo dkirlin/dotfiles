@@ -1,3 +1,5 @@
+" #turn on ctags
+set tags=~/bin/tags
 " #paste on
 " set paste
 
