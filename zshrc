@@ -92,7 +92,7 @@ export PATH="/Users/dkkirlin/.rvm/gems/ruby-2.0.0-p353/bin:/Users/dkkirlin/.rvm/
  if [[ -n $SSH_CONNECTION ]]; then
    export EDITOR='vim'
  else
-   export EDITOR='mvim'
+   export EDITOR='vim'
  fi
 
 # Compilation flags
