@@ -48,6 +48,14 @@ export AWS_CREDENTIAL_FILE="$AWS_IAM_H"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
+#no cd needed
+setopt AUTO_CD
+
+#10 second dealy on delete
+setopt RM_STAR_WAIT
+#
+setopt VI
+
 # Uncomment this to disable bi-weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
 
@@ -89,11 +97,7 @@ export PATH="/Users/dkkirlin/.rvm/gems/ruby-2.0.0-p353/bin:/Users/dkkirlin/.rvm/
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='vim'
- fi
+ export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
