@@ -11,6 +11,8 @@ ZSH_THEME="robbyrussell"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Autoload a screen if we're not in one and make it's name unique  
+#if [[ $STY = '' ]] then screen -xR Dave-K-`date  +%Y%m%d-%H%M%S`; fi
 
 GPG_TTY=`tty`
 export GPG_TTY
@@ -18,6 +20,7 @@ PATH=$PATH:~/bin:/usr/bin/:/usr/local/bin:/usr/local/sbin/:$HOME/.rvm/bin # Add 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 alias ls="ls -G"
 #Git Aliases
+alias vim='mvim -v'
 alias gia='git add'
 alias gic='git commit -m'
 alias gib='git branch'
@@ -97,11 +100,14 @@ export PATH="/Users/dkkirlin/.rvm/gems/ruby-2.0.0-p353/bin:/Users/dkkirlin/.rvm/
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
- export EDITOR='vim'
+ export EDITOR='mvim -v'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
+# insert 'sudo' upon Alt-S
+ insert_sudo () { zle beginning-of-line; zle -U "sudo " }
+ zle -N insert-sudo insert_sudo
+ bindkey "^[s" insert-sudo
 # ssh
  export SSH_KEY_PATH="~/.ssh/dsa_id"
 

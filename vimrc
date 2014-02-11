@@ -132,8 +132,6 @@ imap KJ <Esc>
 
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
 
-set clipboard=unnamed
-
 set autoread " reload files they change on disk (e.g., git checkout)
 
 " highlight whitespace symbols
