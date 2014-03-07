@@ -62,6 +62,10 @@ setopt VI
 # Uncomment this to disable bi-weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
 
+ __remote_commands=(scp rsync)
+ autoload -U url-quote-magic
+ zle -N self-insert url-quote-magic
+ zstyle -e :urlglobber url-other-schema '[[ $__remote_commands[(i)$words[1]] -le ${#__remote_commands} ]] && reply=("*") || reply=(http https ftp)'
 # Uncomment to change how often before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
 

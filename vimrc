@@ -3,6 +3,8 @@ set tags=~/bin/tags
 " #paste on
 " set paste
 
+set clipboard=unnamed
+
 " set 256 colors
 set t_Co=256
 
