@@ -16,6 +16,7 @@ ZSH_THEME="robbyrussell"
 
 GPG_TTY=`tty`
 export GPG_TTY
+setopt EXTENDED_HISTORY
 PATH=$PATH:~/bin:/usr/bin/:/usr/local/bin:/usr/local/sbin/:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 alias ls="ls -G"
