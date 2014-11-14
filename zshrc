@@ -17,7 +17,7 @@ ZSH_THEME="robbyrussell"
 GPG_TTY=`tty`
 export GPG_TTY
 setopt EXTENDED_HISTORY
-PATH=$PATH:~/bin:/usr/bin/:/usr/local/bin:/usr/local/sbin/:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:~/bin:/usr/bin/:/usr/local/bin:/usr/local/sbin/:$HOME/.rvm/bin:/apollo/env/SDETools/bin:/apollo/env/SDETools/sbin # Add RVM to PATH for scripting
 case _mydomain="$(hostname)" in
     dkkirlin.desktop.amazon.com) PATH=$PATH:/apollo/env/SDETools/bin/:/apollo/env/SDETools/sbin;;
 esac
