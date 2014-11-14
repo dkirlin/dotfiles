@@ -21,7 +21,7 @@ PATH=$PATH:~/bin:/usr/bin/:/usr/local/bin:/usr/local/sbin/:$HOME/.rvm/bin # Add 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 alias ls="ls -G"
 #Git Aliases
-case _myos="$(uname)"
+case _myos="$(uname)" in
   Darwin) alias vim='mvim -v';;
 esac
 
