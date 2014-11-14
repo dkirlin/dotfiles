@@ -11,7 +11,9 @@ set tags=~/bin/tags
 " #paste on
 " set paste
 "enforce 80 character limit"
-:set colorcolumn=81
+if version >= 720
+  :set colorcolumn=81
+endif
 
 set clipboard=unnamed
 
