@@ -17,10 +17,7 @@ ZSH_THEME="robbyrussell"
 GPG_TTY=`tty`
 export GPG_TTY
 setopt EXTENDED_HISTORY
-PATH=$PATH:~/bin:/usr/bin/:/usr/local/bin:/usr/local/sbin/:$HOME/.rvm/bin:/apollo/env/SDETools/bin:/apollo/env/SDETools/sbin # Add RVM to PATH for scripting
-case _mydomain="$(hostname)" in
-    dkkirlin.desktop.amazon.com) PATH=$PATH:/apollo/env/SDETools/bin/:/apollo/env/SDETools/sbin;;
-esac
+export PATH=$PATH:~/bin:/usr/bin/:/usr/local/bin:/usr/local/sbin/:$HOME/.rvm/bin:/apollo/env/SDETools/bin:/apollo/env/SDETools/sbin # Add RVM to PATH for scripting
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 alias ls="ls -G"
@@ -108,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/Users/dkkirlin/.rvm/gems/ruby-2.0.0-p353/bin:/Users/dkkirlin/.rvm/gems/ruby-2.0.0-p353@global/bin:/Users/dkkirlin/.rvm/rubies/ruby-2.0.0-p353/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Users/dkkirlin/bin:/usr/local/bin:/usr/local/sbin/:/Users/dkkirlin/.rvm/bin:/Users/dkkirlin/.awstools/iam/bin"
+export PATH="$PATH:/Users/dkkirlin/.rvm/gems/ruby-2.0.0-p353/bin:/Users/dkkirlin/.rvm/gems/ruby-2.0.0-p353@global/bin:/Users/dkkirlin/.rvm/rubies/ruby-2.0.0-p353/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Users/dkkirlin/bin:/usr/local/bin:/usr/local/sbin/:/Users/dkkirlin/.rvm/bin:/Users/dkkirlin/.awstools/iam/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
