@@ -3,9 +3,34 @@
 " map <C-Tab> :tabnext<CR>
 " map <C-S-Tab> :tabprev<CR>
 
+" Required Vundle setup
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+" Vundle Plugins
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-bundler'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
+Plugin 'skalnik/vim-vroom'
 
+call vundle#end()            " required
+
+" open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead 
 " #turn on ctags
 set tags=~/bin/tags
 " #paste on
@@ -21,14 +46,6 @@ set clipboard=unnamed
 set t_Co=256
 
 color muon
-
-" Adding pathogen
-call pathogen#infect()
-
-" Attempt to determine the type of a file based on its name and possibly its
-" contents.  Use this to allow intelligent auto-indenting for each filetype,
-" and for plugins that are filetype specific.
-filetype indent plugin on
 
 " Enable syntax highlighting
 syntax on
@@ -87,8 +104,6 @@ set notimeout ttimeout ttimeoutlen=200
 " line of a window
 set ruler
 
-" Add git branch to statusline
-set statusline=%F\ %m\ %{fugitive#statusline()}\ %y%=%l,%c\ %P
 
 " INDENTATION OPTIONS
 " Indentation settings for using 2 spaces instead of tabs.

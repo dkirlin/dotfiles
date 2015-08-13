@@ -17,10 +17,12 @@ ZSH_THEME="robbyrussell"
 GPG_TTY=`tty`
 export GPG_TTY
 setopt EXTENDED_HISTORY
-export PATH=$PATH:~/bin:/usr/bin/:/usr/local/bin:/usr/local/sbin/:$HOME/.rvm/bin:/apollo/env/SDETools/bin:/apollo/env/SDETools/sbin # Add RVM to PATH for scripting
+export PATH=/Users/dkkirlin/.rvm/gems/ruby-2.1.0/bin:$PATH:~/bin:/usr/bin/:/usr/local/bin:/usr/local/sbin/:$HOME/.rvm/bin:/apollo/env/SDETools/bin:/apollo/env/SDETools/sbin # Add RVM to PATH for scripting
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 alias ls="ls -G"
+
+
 #Git Aliases
 case _myos="$(uname)" in
   Darwin) alias vim='mvim -v';;
@@ -99,13 +101,11 @@ HIST_STAMPS="mm/dd/yyyy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby gitprompt github capistrano bundler tmux tmuxinator redis-cli rake themes )
-
+plugins=(git rails ruby gitprompt github capistrano bundle tmux tmuxinator redis-cli rake themes )
 source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
-export PATH="$PATH:/Users/dkkirlin/.rvm/gems/ruby-2.0.0-p353/bin:/Users/dkkirlin/.rvm/gems/ruby-2.0.0-p353@global/bin:/Users/dkkirlin/.rvm/rubies/ruby-2.0.0-p353/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Users/dkkirlin/bin:/usr/local/bin:/usr/local/sbin/:/Users/dkkirlin/.rvm/bin:/Users/dkkirlin/.awstools/iam/bin"
+export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Users/dkkirlin/bin:/usr/local/bin:/usr/local/sbin/:/Users/dkkirlin/.rvm/bin:/Users/dkkirlin/.awstools/iam/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
