@@ -5,7 +5,7 @@
 
 " Required Vundle setup
 set nocompatible              " be iMproved, required
-filetype off                  " required
+"filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -15,6 +15,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " Vundle Plugins
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
@@ -30,6 +31,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 filetype plugin indent on    " required
+
 " To ignore plugin indent changes, instead 
 " #turn on ctags
 set tags=~/bin/tags
@@ -180,7 +182,8 @@ highlight diffRemoved guifg=#bf0000
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%81v.\+/
 
-
+" Ruby VIM
+ autocmd FileType ruby compiler ruby
 " Current line customization
 " high light current line in insert mode
 " Enable CursorLine
